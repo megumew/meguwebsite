@@ -1,5 +1,203 @@
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+<style>
+    .red-text {
+        color: red;
+    }
 
+    h2 {
+        font-family: Lobster, monospace;
+    }
+
+    p {
+        font-size: 16px;
+        font-family: monospace;
+    }
+
+  img:hover {
+    transform: scale(1.5);
+  }
+
+    body {
+        background-color: #000000;
+    }
+
+    .thick-green-border {
+        border-color: rgb(243, 207, 238);
+        border-width: 5px;
+        border-style: solid;
+        border-radius: 50%;
+    }
+
+    .smaller-image {
+        width: 100px;
+        margin: auto;
+    }
+
+    .silver-background {
+        background-color: silver;
+    }
+
+    #box {
+        width: 500px;
+        height: 500px;
+        outline: #000000;
+
+        background: linear-gradient(35deg, #CCFFFF, #FFCCCC, rgb(204, 204, 255));
+    }
+
+    #box:hover{
+        animation-name: breath;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+
+    }
+
+    @keyframes breath{
+        0%{
+            opacity: 1;
+        }
+        50%{
+            opacity: .1;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    #thumbnail {
+        box-shadow: 0 10px 20px rgba(133, 115, 131, 0.459), 0 6px 6px rgba(133, 115, 131, 0.459);
+    }
+
+    [type='checkbox'] {
+        margin: 10px 0px 15px 0px;
+    }
+
+    .fullCard {
+        position: fixed;
+        height: 95%;
+        width: 99%;
+        top: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: auto;
+        padding: 4px;
+    }
+
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(35deg, #CCFFFF, #FFCCCC, rgb(204, 204, 255));
+    }
+
+    nav ul {
+        margin: 0px;
+        padding: 5px 0px 5px 30px;
+    }
+
+    nav li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    .center {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .back {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: ffe6f2;
+    animation-name: backdiv;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+
+  }
+
+  .heart {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(123, 187, 247);
+    height: 50px;
+    width: 50px;
+    transform: rotate(-45deg);
+  }
+  .heart:after {
+    background-color: rgb(123, 187, 247);
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    left: 25px;
+  }
+  .heart:before {
+    background-color: rgb(123, 187, 247);
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: -25px;
+    left: 0px;
+  }
+  .heart:hover{
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes backdiv {
+    50% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes beat {
+    0% {
+      transform: scale(1) rotate(-45deg);
+    }
+    50% {
+      transform: scale(0.6) rotate(-45deg);
+    }
+  }
+</style>
+
+<main>
+    <nav id="navbar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="fullCard" id="thumbnail"></div>
+
+    <div id="box" class="center"></div>
+
+
+    <div class="heart"></div>
+    <hr>
+
+
+
+</main>
 
 </html>
